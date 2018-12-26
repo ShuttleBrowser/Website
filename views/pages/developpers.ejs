@@ -1,0 +1,46 @@
+<link href="/css/developpers.css" rel="stylesheet" type="text/css" />
+
+<div class="developersPage">
+    <div class="developers">
+
+        <div class="dev-content">
+            <p class="dev-title">All you need as a developer.</p>
+
+            <br>
+
+            <div class="git">
+                <br>
+                <p class="git-title">SOURCE CODE</p>
+                <p class="git-license">PROJECT LICENSED UNDER THE <a href="#" class="undeline">NPOSL 3.0</a> LICENSE</p>
+
+                <div class="git-command" @click="copyToClipboard">
+                    <div class="git-url">
+                        <input type="text" value="git clone https://github.com/ShuttleBrowser/shuttle.git" id="git-cmd" readonly onclick="copyToClipboard()" />
+                    </div>
+                    <div class="git-copy-btn" onclick="copyToClipboard()">
+                        <icon name="copy"/>
+                    </div>
+                </div>
+
+                <div class="git-download">
+                    <a href="#" class="git-link" @click="fetchGit()">DOWNLOAD ZIP</a>
+                    <a href="#" class="git-link">FORK ON GITHUB</a>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="commits">
+                <p class="commits-title">LATEST COMMITS</p>
+                <br>
+                <div class="commit-list"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <banner/>
+</div>
+
+<script src="/js/developpers.js"></script>

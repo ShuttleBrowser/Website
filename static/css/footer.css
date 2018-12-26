@@ -1,0 +1,70 @@
+.foot {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+}
+
+.copyright {
+    float: left;
+    margin-top: 27px;
+    margin-left: 70px;
+    font-size: 12px;
+    color: #c4c5c4;
+}
+.social {
+    float: left;
+    margin-left: 25px;
+    margin-top: 9px;
+}
+.social-link {
+    float: left;
+    color: #c4c5c4;
+    border: 1px solid #c4c5c4;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin-top: 11.5px;
+    margin-left: 18px;
+}
+.social-link svg {
+    margin-top: 5.5px;
+}
+
+.links {
+    position: absolute;
+    right: 70px;
+    margin-top: 27px;
+}
+.website-link {
+    float: right;
+    color: #c4c5c4;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 1120px) {
+    .copyright {
+        float: left;
+        margin-top: 15px;
+        margin-left: 70px;
+        font-size: 12px;
+        color: #c4c5c4;
+    }
+
+    .social {
+        position: absolute;
+        right: 70px;
+    }
+    
+    .links {
+        position: absolute;
+        left: 70px;
+        float: right;
+    }
+
+    .website-link {
+        color: #c4c5c4;
+        margin-left: 30px;
+    }
+}
