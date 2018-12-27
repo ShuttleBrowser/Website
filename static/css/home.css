@@ -47,40 +47,6 @@
     display: block;
 }
 
-#banner {
-    background-color: #e71f5e;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 14px;
-    height: 80px;
-    background-image: url(/img/banner.png);
-    background-size: cover;
-    background-position: center center;
-}
-
-#banner hr {
-    border: 0px none;
-    height: 1px;
-    width: 11%;
-    margin: 0 50px 0 70px;
-    background: white;
-}
-
-#banner #joinus {
-    font-size: 10px;
-    border-radius: 9px;
-    height: 18px;
-    line-height: 18px;
-    border: 1px solid white;
-    padding: 0 12px;
-    margin-left: 20px;
-    display: inline-block;
-}
-#banner #joinus:hover {
-    background: white;
-    color: #e71f5e;
-}
-
 #screen {
     position: absolute;
     right: 13%;

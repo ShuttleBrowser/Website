@@ -12,14 +12,15 @@ body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #18202b;
-  background-image: url(/img/bg-full.svg);
-  bacdkground-image: url(https://s3.invisionapp-cdn.com/storage.invisionapp.com/screens/files/338533265.jpg?x-amz-meta-iv=1&response-cache-control=max-age%3D2419200&x-amz-meta-ck=0d68c4d732612df4a0cea21222059a1d&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1548979200&Signature=%2BtGVf01%2FzxhUlJwj1o7%2BdoN72Vw%3D);
-  background-size: cover;
-  background-size: 100% auto;
-  backgdround-position: top left;
   height: 100%;
   position: relative;
   color: white;
+  background-image: url(/img/bg-full.svg);
+  background-size: cover;
+  background-position: center center;
+ cbackground-image: url(https://s3.invisionapp-cdn.com/storage.invisionapp.com/screens/files/338533264.jpg?x-amz-meta-iv=1&response-cache-control=max-age%3D2419200&x-amz-meta-ck=0d68c4d732612df4a0cea21222059a1d&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1548979200&Signature=5Gn%2FjWb0NxfcFcU0bJo8H6WuJUI%3D);
+  cbackground-size: 100% auto;
+  cbackground-position: top left;
 }
 
 img {

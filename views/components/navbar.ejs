@@ -4,7 +4,7 @@
             <img src="/img/logo-wh.svg" alt="">
         </a>
         <ul>
-            <li id="download"><a href="/download/">DOWNLOAD</a></li>
+            <li id="download"><a href="/download">DOWNLOAD</a></li>
         </ul>
 
         <ul id="nav">
@@ -13,16 +13,16 @@
             </li><li>
                 RESOURCES
                 <ul class="submenu">
-                    <li><a href="/developers/">Developers</a></li>
+                    <li><a href="/developers">Developers</a></li>
                     <li><a href="https://github.com/ShuttleBrowser/Shuttle/blob/master/README.md" target="_blank">Documentation</a></li>
                     <hr>
-                    <li><a href="/addons/">Addons Store</a></li>
+                    <li><a href="/addons">Addons Store</a></li>
                 </ul>
             </li><li>
-                ABOUT
-            </li><li id="signup">
+                <a href="/about">ABOUT</a>
+            </li><li id="signup" :class="{ active: isActive }">
                 SIGN UP
-            </li><li id="signin">
+            </li><li id="signin" :class="{ active: isActive }">
                 SIGN IN
             </li>
         </ul>

@@ -1,0 +1,139 @@
+#developers {
+    height: 100%;
+    text-align: center;
+}
+
+#developers #title {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+#developers #codeframe {
+    border: 1px solid #e71f5f;
+    border-radius: 5px;
+}
+#developers #sourcecode {
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0;
+    margin-bottom: 1px;
+    margin-bottom: 8px;
+}
+#developers #license {
+    font-size: 6px;
+    padding: 0;
+    margin: 0;
+    color: #c8c9c9;
+}
+#developers #license a {
+    color: white;
+}
+
+#developers #command {
+    position: relative;
+    margin: 8px auto;
+    width: 90%;
+    border-radius: 2px;
+    overflow: hidden;
+}
+#developers #command input {
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #0c1117;
+    border: none;
+    color: white;
+    line-height: 24px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+#developers #copybutton {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: #1b2733;
+    width: 24px;
+    height: 24px;
+}
+#developers #copybutton img {
+    transform: scale(.5)
+}
+
+#developers #command + .middle {
+    width: 70%;
+    margin: 0 auto 8px;
+    color: #c8c9c9;
+}
+
+#developers #command + .middle p {
+    width: 50%;
+    font-size: 11px;
+}
+
+#latestcommits {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.last-commit {
+    text-align: left;
+    width: 95%;
+    height: 45px;
+    margin-top: 10px;
+    background-color: #1c2834;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    -webkit-box-shadow: -2px 16px 50px 1px rgba(0,0,0,0.57); 
+    box-shadow: -2px 16px 50px 1px rgba(0,0,0,0.57);
+}
+
+.last-commit-profile-img {
+    border-radius: 5px;
+    position: relative;
+    left: 6px;
+    top: 5.1px;
+    width: 30px;
+    float: left;
+}
+
+.last-commit-text {
+    position: relative;
+    top: 1.1px;
+    margin-left: 46px;
+}
+
+.last-commit-text-title {
+    font-size: 12px;
+}
+
+.last-commit-text-username {
+    font-size: 12px;
+    color: #919191;
+}
+
+.last-commit-text-comited {
+    left: 60px;
+    font-size: 12px;
+    color: #919191;
+}
+
+.last-commit-profile-text {
+    position: absolute;
+    top: 17px;
+}
+
+.last-commit-profile-hash {
+    color: #e71f5f;
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+#developers #more {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #c8c9c9;
+}

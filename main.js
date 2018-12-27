@@ -9,16 +9,21 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.render('index', {page: "about"})
+    res.render('index', {page: "about", title : "About"})
 })
 
-app.get('/developpers', (req, res) => {
-    res.render('index', {page: "developpers"})
+app.get('/developers', (req, res) => {
+    res.render('index', {page: "developers", title : "Developers"})
 })
 
 app.get('*', (req, res) => {
     res.render('index', {page: "home"})
 })
+
+app.use(function (err, req, res, next) {
+    console.log(err)
+    res.render('index', {page: 'error', title : 'Error'})
+});
 
 const port = process.env.PORT || 80;
 app.listen(port, () => {

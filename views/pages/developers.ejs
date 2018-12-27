@@ -1,0 +1,73 @@
+<link href="/css/developers.css" rel="stylesheet" type="text/css" />
+
+<div id="developers" class="middle">
+    <div>
+        <h2 id="title">All you need as a developer.</h2>
+        <div id="codeframe">
+            <h3 id="sourcecode">SOURCE CODE</h3>
+            <p id="license">PROJECT LICENSED UNDER THE <a href="https://opensource.org/licenses/NPOSL-3.0" target="_blank">NPOSL 3.0</a> LICENSE</p>
+            <div id="command">
+                <input type="text" value="git clone https://github.com/ShuttleBrowser/shuttle.git" id="git-cmd" readonly onclick="copyToClipboard()" />
+                <div id="copybutton" onclick="copyToClipboard()">
+                    <img src="/img/copy to clipboard.svg" alt="copy">
+                </div>
+            </div>
+            <div class="middle">
+                <p>
+                    <a href="https://github.com//ShuttleBrowser/Shuttle/archive/master.zip">DOWNLOAD ZIP</a>
+                </p><p>
+                    <a href="https://github.com/ShuttleBrowser/shuttle" target="_blank">FORK ON GIT</a>
+                </p>
+            </div>
+        </div>
+        <h3 id="latestcommits">LATEST COMMITS</h3>
+        <div class="commit-list"></div>
+        <p id="more"><a href="https://github.com/ShuttleBrowser/Shuttle/commits/master" target="_blank">MORE</a></p>
+    </div><span class="taille"></span>
+</div>
+
+<!--
+<div class="developersPage">
+    <div class="developers">
+
+        <div class="dev-content">
+            <p class="dev-title">All you need as a developer.</p>
+
+            <br>
+
+            <div class="git">
+                <br>
+                <p class="git-title">SOURCE CODE</p>
+                <p class="git-license">PROJECT LICENSED UNDER THE <a href="#" class="undeline">NPOSL 3.0</a> LICENSE</p>
+
+                <div class="git-command" @click="copyToClipboard">
+                    <div class="git-url">
+                        <input type="text" value="git clone https://github.com/ShuttleBrowser/shuttle.git" id="git-cmd" readonly onclick="copyToClipboard()" />
+                    </div>
+                    <div class="git-copy-btn" onclick="copyToClipboard()">
+                        <icon name="copy"/>
+                    </div>
+                </div>
+
+                <div class="git-download">
+                    <a href="#" class="git-link" @click="fetchGit()">DOWNLOAD ZIP</a>
+                    <a href="#" class="git-link">FORK ON GITHUB</a>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="commits">
+                <p class="commits-title">LATEST COMMITS</p>
+                <br>
+                <div class="commit-list"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+-->
+
+<script src="/js/developers.js"></script>
