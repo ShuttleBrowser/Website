@@ -57,3 +57,41 @@
 #about #bestcontributors {
     margin: 10px 0;
 }
+
+.squares { grid-area: squares; }
+
+.squares {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(7, 12px)
+}
+
+.squares {
+  grid-auto-flow: column;
+  grid-auto-columns: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Other styling */
+
+.squares li {
+  background-color: #412035;
+  list-style-type: none;
+}
+
+.squares li[data-level="1"] {
+  background-color: #a91f4f;
+}
+
+.squares li[data-level="2"] {
+  background-color: #e71f5f;
+}
+
+.squares li[data-level="3"] {
+  background-color: #412035;
+}
+
+.squares li[data-level="4"] {
+  background-color: #412035;
+}

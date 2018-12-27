@@ -17,12 +17,8 @@ app.get('/developers', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.render('index', {page: "home"})
-})
-
-app.use(function (err, req, res, next) {
     res.render('index', {page: 'error', title : 'Error'})
-});
+})
 
 const port = process.env.PORT || 80;
 app.listen(port, () => {
