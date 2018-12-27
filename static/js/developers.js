@@ -1,4 +1,9 @@
-let gitUrl = "https://api.github.com/repos/ShuttleBrowser/shuttle/commits"
+
+let now = new Date()
+let previous = new Date()
+previous.setFullYear(previous.getFullYear() - 1)
+
+let gitUrl = "https://api.github.com/repos/ShuttleBrowser/shuttle/commits?since=" + previous.toISOString() + "&until="
 
 let copyToClipboard = () => {
     let textCopy = document.querySelector('#git-cmd')
@@ -6,26 +11,29 @@ let copyToClipboard = () => {
     document.execCommand("copy")
 }
 
-let fetchGit = () => {
-    fetch(gitUrl).then(res => res.json()).then((data) => {
+let fetchGit = (time) => {
+    console.log(gitUrl + time)
+    fetch(gitUrl + time).then((res) => {
+        return res.json()
+    }).then((data) => {
         for (i in data) {
-            if (i >= 3) {
-                break
-            } else {
+            if (i < 3) {
                 console.log(data[i])
                 document.querySelector('.commit-list').innerHTML += `
                 <div class="last-commit">
-                    <img src="${data[i].author.avatar_url}" class="last-commit-profile-img">
+                    <img src="${(data[i].author != null) ? data[i].author.avatar_url : ''}" class="last-commit-profile-img">
                     <div class="last-commit-text">
                         <p><span class="last-commit-text-title">${data[i].commit.message}</span></p>
-                        <p class="last-commit-profile-text"><span class="last-commit-text-username"><a href="${data[i].committer.html_url}" target="_blank">${data[i].author.login}</a></span> <span class="last-commit-text-comited">committed ${differenceDate(data[i].commit.author.date)} ago</span></p>
+                        <p class="last-commit-profile-text"><span class="last-commit-text-username"><a href="${(data[i].committer != null) ? data[i].committer.html_url : '#'}" target="_blank">${(data[i].author != null) ? data[i].author.login : ''}</a></span> <span class="last-commit-text-comited">committed ${(data[i].author != null) ? differenceDate(data[i].commit.author.date) : ''} ago</span></p>
                         <p><span class="last-commit-profile-hash"><a href="${data[i].html_url}" target="_blank">${data[i].sha.substring(0,7)}</a></span></p>
                     </div>
                 </div>
                 `
             }
         }
-    })
+    }).catch(function(err) {
+        console.error(err)
+    });
 }
 
 let differenceDate = (date) => {
@@ -98,4 +106,4 @@ let differenceDate = (date) => {
     return sentence
 }
 
-fetchGit()
+fetchGit(now.toISOString())

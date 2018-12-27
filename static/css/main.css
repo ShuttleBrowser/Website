@@ -18,9 +18,6 @@ body {
   background-image: url(/img/bg-full.svg);
   background-size: cover;
   background-position: center center;
- cbackground-image: url(https://s3.invisionapp-cdn.com/storage.invisionapp.com/screens/files/338533264.jpg?x-amz-meta-iv=1&response-cache-control=max-age%3D2419200&x-amz-meta-ck=0d68c4d732612df4a0cea21222059a1d&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1548979200&Signature=5Gn%2FjWb0NxfcFcU0bJo8H6WuJUI%3D);
-  cbackground-size: 100% auto;
-  cbackground-position: top left;
 }
 
 img {

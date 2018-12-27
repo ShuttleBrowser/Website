@@ -21,7 +21,6 @@ app.get('*', (req, res) => {
 })
 
 app.use(function (err, req, res, next) {
-    console.log(err)
     res.render('index', {page: 'error', title : 'Error'})
 });
 

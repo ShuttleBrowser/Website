@@ -1,0 +1,59 @@
+#about {
+    height: 100%;
+    text-align: center;
+}
+
+#about #family {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    /*love: true;*/
+}
+
+#about table {
+    text-align: left;
+    width: 465px;
+    margin: 0 auto;
+    border: 0px none;
+}
+
+#about table h3 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+#about table p {
+    font-size: 11px;
+    text-align: justify;
+    opacity: .7;
+    word-wrap: none;
+}
+
+#about table td {
+    padding: 15px 20px 15px 0;
+    vertical-align: top;
+}
+
+#about table td+td {
+    padding: 15px 0 15px 20px;
+}
+
+#about #learnmore {
+    font-size: 11px;
+    opacity: .7;
+    font-weight: 400;
+}
+
+#about img {
+    width: 465px;
+}
+
+#about #specialthanks {
+    margin-top: 45px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#about #bestcontributors {
+    margin: 10px 0;
+}

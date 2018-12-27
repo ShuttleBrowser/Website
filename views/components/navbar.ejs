@@ -8,8 +8,12 @@
         </ul>
 
         <ul id="nav">
-            <li class="active">
-                HOME
+            <li
+            <% if(page == 'home') { %>
+                class="active"
+            <% } %>
+            >
+                <a href="/">HOME</a>
             </li><li>
                 RESOURCES
                 <ul class="submenu">
@@ -18,7 +22,11 @@
                     <hr>
                     <li><a href="/addons">Addons Store</a></li>
                 </ul>
-            </li><li>
+            </li><li
+            <% if(page == 'about') { %>
+                class="active"
+            <% } %>
+            >
                 <a href="/about">ABOUT</a>
             </li><li id="signup" :class="{ active: isActive }">
                 SIGN UP
