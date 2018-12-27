@@ -1,51 +1,29 @@
-<link href="/css/navbar.css" rel="stylesheet" type="text/css" />
-
-<div class="navbar transparent">
-    <!-- LOGO -->
-    <div class="logo-download">
-        <a href="/"><img class="logo" src="/img/logo-wh.svg"></a>
-        <a href="#" class="nav-download-btn rounded-btn">DOWNLOAD</a>
-    </div>
-
-    <!-- LINKS -->
-    <div class="nav-links">
+<link rel="stylesheet" href="/css/navbar.css">
+<header>
+        <a href="/">
+            <img src="/img/logo-wh.svg" alt="">
+        </a>
         <ul>
-            <li class="navbar-link" class="active">
-                <a href="/about">ABOUT</a>
-            </li>
-            <li class="navbar-link" id="ressources" class="active">
-                <a href="/developpers">RESSOURCES</a>
-            </li>
-            <li class="navbar-link" class="active">
-                <a href="/">HOME</a>
-            </li>
+            <li id="download"><a href="/download/">DOWNLOAD</a></li>
         </ul>
-    </div>
 
-    <!-- ACCOUNTS -->
-    <div class="nav-accounts">
-        <ul>
-            <li class="navbar-account-link" @click="getPageName" :class="{ active: isActive }">
-                <a href="/auth/signin">SIGN IN</a>
-            </li>
-            <li class="navbar-account-link" @click="getPageName" :class="{ active: isActive }">
-                <a class="rounded-btn nav-signup-btn" href="/auth/signup">SIGN UP</a>
-            </li>
-        </ul>
-    </div>
-        <div class="dropDown" @mouseleave="toggleDropDown(false)" @click="setDropDownPosition">
-        <ul class="dropDown-inner">
-            <li class="dropDown-link">
-                <a href="/ressources/developers">DEVELOPERS</a>
-            </li>
-            <li class="dropDown-link">
-                <a href="/ressources/documentation">DOCUMENTATION</a>
-            </li>
-            <hr>
-            <li class="dropDown-link">
-                <a href="/ressources/store">ADDONS STORE</a>
+        <ul id="nav">
+            <li class="active">
+                HOME
+            </li><li>
+                RESOURCES
+                <ul class="submenu">
+                    <li><a href="/developers/">Developers</a></li>
+                    <li><a href="https://github.com/ShuttleBrowser/Shuttle/blob/master/README.md" target="_blank">Documentation</a></li>
+                    <hr>
+                    <li><a href="/addons/">Addons Store</a></li>
+                </ul>
+            </li><li>
+                ABOUT
+            </li><li id="signup">
+                SIGN UP
+            </li><li id="signin">
+                SIGN IN
             </li>
         </ul>
-    </div>
-    <div class="dropDown-mouseover" @mouseleave="toggleDropDown(false)"></div>
-</div>
+</header>

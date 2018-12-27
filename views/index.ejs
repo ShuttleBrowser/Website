@@ -7,13 +7,14 @@
     <title>Shuttle</title>
 
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/img/favicon.png">
 </head>
 <body>
-    <%- include('components/navbar') %>
-    <div class="content">
+    <%- include(`components/navbar`) %>
+    <div id="content">
         <%- include(`pages/${page}`) %>
     </div>
-    <%- include('components/banner') %>
-    <%- include('components/footer') %>
+    <%- include(`components/banner`) %>
+    <%- include(`components/footer`) %>
 </body>
 </html>

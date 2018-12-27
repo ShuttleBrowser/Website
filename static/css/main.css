@@ -1,6 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 
+html {
+  height: 100%;
+}
+
+* {
+  transition: all .5s;
+}
+
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #18202b;
+  background-image: url(/img/bg-full.svg);
+  bacdkground-image: url(https://s3.invisionapp-cdn.com/storage.invisionapp.com/screens/files/338533265.jpg?x-amz-meta-iv=1&response-cache-control=max-age%3D2419200&x-amz-meta-ck=0d68c4d732612df4a0cea21222059a1d&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1548979200&Signature=%2BtGVf01%2FzxhUlJwj1o7%2BdoN72Vw%3D);
+  background-size: cover;
+  background-size: 100% auto;
+  backgdround-position: top left;
+  height: 100%;
+  position: relative;
+  color: white;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.middle > * {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+span.taille {
+  height: 100%;
+}
+
+#content {
+  height: 100%;
 }

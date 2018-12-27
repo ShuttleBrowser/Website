@@ -1,156 +1,125 @@
-.dropDown-mouseover {
+header {
     position: absolute;
-    top: 33px;
-    width: 109px;
-    height: 180px;
-    pointer-events: none;
+    top: 40px;
+    left: 120px;
+    right: 140px;
 }
 
-.dropDown {
-    position: absolute;
-    top: 83px;
-    width: 109px;
-    height: 130px;
-    border-radius: 14px;
-    background-color: white;
-    text-align: center;
-    display: none;
-    transition-duration: 5s;
-    -webkit-box-shadow: 0px 0px 23px 11px rgba(0,0,0,0.53); 
-    box-shadow: 0px 0px 23px 11px rgba(0,0,0,0.53);
+header > a {
+    width: 150px;
 }
 
-.dropDown-inner {
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+header #download {
+    border: 1px solid #e71f5e;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    padding: 0 6px;
+    color: #e71f5e;
+    border-radius: 7px;
+    margin-left: 30px;
+}
+header #download:hover {
+    background: #e71f5e;
+    color: white;
 }
 
-.dropDown-inner hr {
-
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #efefef;
-
+header #nav {
+    float: right;
+    cursor: default;
 }
 
-.dropDown-link a {
+header > *, header #nav > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header #nav > * {
+    font-size: 14px;
+    margin: 0 0 0 70px;
+    padding: 3px 0;
+    border: 1px solid transparent;
+    border-width: 0 0 1px;
+}
+
+header #nav > *.active {
+    border-bottom-color: #b6b9b9;
+}
+
+header #nav  li {
+    position: relative;
+}
+header #nav > li:hover:not(.active) {
     color: #b6b9b9;
-    font-size: 12px;
-    transition-duration: 0.5s;
 }
 
-.dropDown-link a:hover {
+.submenu {
+    background: white;
+    position: absolute;
+    padding: 15px;
+    border-radius: 10px;
+    color: #b6b9b9;
+    font-size: 11px;
+    text-align: center;
+    left: 50%;
+    top: 100%;
+    margin-top: 10px;
+    transform: translateX(-50%);
+    display: none;
+    opacity: 0;
+    text-transform: uppercase;
+}
+.submenu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+li:hover .submenu {
+    display: block;
+    opacity: 1;
+}
+
+.submenu hr {
+    border: 0px none;
+    height: 1px;
+    background: #eee;
+}
+
+.submenu li {
+    padding: 4px 0;
+}
+
+.submenu a:hover {
+    color: #878787;
+}
+
+.submenu a:active {
     color: #e71f5f;
 }
 
-ul {
-    list-style-type: none;
+header #signup, header #signin {
+    font-size: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 13px;
+header #signup {
+    border: 1px solid white;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 9px;
+    padding: 0 25px;
+    margin: 0 0 0 105px;
+}
+header #signup:hover {
+    background: white;
+    color: #18212b;
 }
 
-.transparent {
-    background-color: transparent !important;
-}
-
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 127px;
-    background-color: #18202b;
-}
-
-.logo-download {
-    float: left;
-    position: absolute;
-    left: 100px;
-}
-
-.nav-links {
-    position: absolute;
-    right: 400px;
-    float: left;
-}
-
-.nav-accounts {
-    position: absolute;
-    right: 100px;
-    float: left;
-}
-
-.logo {
-    margin-top: 40px;
-    width: 150px;
-    float: left;
-}
-
-.navbar-link {
-    float: right;
-    margin-top: 37px;
-    margin-right: 30px;
-    margin-left: 30px;
-    border: none;
-    transition-duration: 0.3s;
-}
-
-.navbar-link:hover {
-    border-bottom: 1px solid white;
-}
-
-.navbar-account-link {
-    float: right;
-    margin-top: 35px;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-
-.nav-download-btn {
-    float: left;
-    margin-left: 50px;
-    margin-top: 55px;
-    color: #e71f5e;
-    border-color: #e71f5e;
-    padding-left: 9px;
-    padding-right: 9px;
-    background-color: transparent;
-    font-size: 12px;
-}
-
-.nav-signup-btn {
-    float: left;
-    margin-left: 50px;
-    margin-top: 1.25px;
-    color: white;
-    border-color: #bfc1c0;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    background-color: transparent;
-}
-
-.rounded-btn {
-    border: solid 1px;
-    border-radius: 25px;
-}
-
-@media screen and (max-width: 1120px) {
-    .nav-accounts {
-        right: 50px;
-    }
-    .nav-links {
-        right: 300px;
-    }
-    .logo-download {
-        left: 50px;
-    }
+header #signin {
+    margin: 0 0 0 25px;
+    color: #b6b9b9;
 }
