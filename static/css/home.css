@@ -50,9 +50,7 @@
 #screen {
     position: absolute;
     right: 13%;
-    height: 69%;
     bottom: -82px;
-    max-width: initial;
-    max-height: initial;
     z-index: 3;
+    width: 22%;
 }
