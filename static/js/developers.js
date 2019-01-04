@@ -12,18 +12,16 @@ let copyToClipboard = () => {
 }
 
 let fetchGit = (time) => {
-    console.log(gitUrl + time)
     fetch(gitUrl + time).then((res) => {
         return res.json()
     }).then((data) => {
         for (i in data) {
             if (i < 3) {
-                console.log(data[i])
                 document.querySelector('.commit-list').innerHTML += `
                 <div class="last-commit">
                     <img src="${(data[i].author != null) ? data[i].author.avatar_url : ''}" class="last-commit-profile-img">
                     <div class="last-commit-text">
-                        <p><span class="last-commit-text-title">${data[i].commit.message}</span></p>
+                        <p><span class="last-commit-text-title">${data[i].commit.message.substring(0, 53)}</span></p>
                         <p class="last-commit-profile-text"><span class="last-commit-text-username"><a href="${(data[i].committer != null) ? data[i].committer.html_url : '#'}" target="_blank">${(data[i].author != null) ? data[i].author.login : ''}</a></span> <span class="last-commit-text-comited">committed ${(data[i].author != null) ? differenceDate(data[i].commit.author.date) : ''} ago</span></p>
                         <p><span class="last-commit-profile-hash"><a href="${data[i].html_url}" target="_blank">${data[i].sha.substring(0,7)}</a></span></p>
                     </div>
