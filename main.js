@@ -1,5 +1,20 @@
 const express = require('express')
+const minifyHTML = require('express-minify-html');
+
 const app = express()
+
+app.use(minifyHTML({
+    override:  true,
+    exception_url: false,
+    htmlMinifier: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes: true,
+        removeEmptyAttributes: true,
+        minifyJS: true
+    }
+}));
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/static'));
