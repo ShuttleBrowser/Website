@@ -7,12 +7,18 @@
     font-size: 36px;
     font-weight: 300;
     margin-bottom: 5px;
+    margin: 0 auto;
     /*love: true;*/
+}
+
+#about > * {
+    max-width: 100%;
 }
 
 #about table {
     text-align: left;
     width: 465px;
+    max-width: 100%;
     margin: 0 auto;
     border: 0px none;
 }
@@ -94,4 +100,28 @@
 
 .squares li[data-level="4"] {
   background-color: #412035;
+}
+
+@media screen and (max-width: 1024px) {
+    #about {
+        height: auto;
+        margin: 90px 0;
+    }
+    
+    #about table, #about #family {
+        width: 60%;
+    }
+
+    #about #family {
+        margin: 0 auto 40px;
+    }
+
+    #about table td, #about table td+td {
+        display: block;
+        padding: 7px 0;
+    }
+
+    #about #learnmore {
+        margin: 45px 0;
+    }
 }

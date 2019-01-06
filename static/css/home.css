@@ -54,3 +54,16 @@
     z-index: 3;
     width: 22%;
 }
+
+@media screen and (max-width: 1024px) {
+    #content {
+        height: 100%;
+    }
+    #carousel, #dyjix, #screen {
+        display: none;
+    }
+    #download-center {
+        top: 50%;
+        transform: translateY(-50%)
+    }
+}

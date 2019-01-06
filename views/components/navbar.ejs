@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/css/navbar.css">
+<script src="/js/navbar.js"></script>
 <header>
-        <a href="/">
-            <img src="/img/logo-wh.svg" alt="">
-        </a>
-        <ul>
-            <li id="download"><a href="/download">DOWNLOAD</a></li>
-        </ul>
+    <a href="/">
+        <img src="/img/logo-wh.svg" alt="">
+    </a>
+    <div id="mainnav" class="">
+        <a href="/download" id="download">DOWNLOAD</a>
 
         <ul id="nav">
             <li
@@ -14,7 +14,11 @@
             <% } %>
             >
                 <a href="/">HOME</a>
-            </li><li>
+            </li><li
+            <% if(page == 'developers') { %>
+                class="active"
+            <% } %>
+            >
                 RESOURCES
                 <ul class="submenu">
                     <li><a href="/developers">Developers</a></li>
@@ -34,4 +38,10 @@
                 SIGN IN
             </li>
         </ul>
+    </div>
+        <div id="hamburger" onclick="toggleDropDown()">
+            <div class="bar" id="first"></div>
+            <div class="bar" id="second"></div>
+            <div class="bar" id="third"></div>
+        </div>
 </header>

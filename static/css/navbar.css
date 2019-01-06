@@ -5,33 +5,35 @@ header {
     right: 140px;
 }
 
-header > a {
+header > a > img {
     width: 150px;
 }
 
 header #download {
     border: 1px solid #e71f5e;
     height: 14px;
-    line-height: 14px;
+    line-height: 12px;
     font-size: 10px;
     padding: 0 6px;
     color: #e71f5e;
     border-radius: 7px;
-    margin-left: 30px;
+    position: absolute;
+    top: 14px;
+    left: 180px;
 }
 header #download:hover {
     background: #e71f5e;
     color: white;
 }
 
-header #nav {
-    float: right;
-    cursor: default;
-}
-
-header > *, header #nav > * {
+header > *, header #mainnav > *, header #nav > * {
     display: inline-block;
     vertical-align: middle;
+}
+
+header #mainnav  {
+    float: right;
+    cursor: default;
 }
 
 header #nav > * {
@@ -49,6 +51,11 @@ header #nav > *.active {
 header #nav  li {
     position: relative;
 }
+
+header #nav li:first-child {
+    margin-left: 0px;
+}
+
 header #nav > li:hover:not(.active) {
     color: #b6b9b9;
 }
@@ -122,4 +129,127 @@ header #signup:hover {
 header #signin {
     margin: 0 0 0 25px;
     color: #b6b9b9;
+}
+
+header #hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 1070px) {
+    header {
+        position: initial;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 30px 0;
+    }
+    
+    header #mainnav {
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+    }
+
+    header li > a {
+        display: block;
+    }
+
+    header #mainnav.active {
+        max-height: 5000px;
+    }
+
+    header #mainnav > * {
+        margin: 2em;
+        display: block;
+    }
+
+    header #download {
+        border: 0px none;
+        font-size: 1em;
+        padding: 0;
+        background: transparent;
+        position: initial;
+    }
+
+    header #download:hover {
+        background: transparent;
+        color: #e71f5e;
+    }
+
+    header #nav {
+        float: initial;
+    }
+
+    header #nav > * {
+        display: block;
+        color: #b6b9b9;
+        font-size: 1em;
+        margin: .5em 0;
+        padding: 0;
+    }
+
+    header #nav > .active {
+        border: 0px none;
+        color: black;
+    }
+
+    .submenu {
+        display: block;
+        position: initial;
+        border-radius: 0;
+        color: inherit;
+        opacity: 1;
+        transform: initial;
+        font-size: .9em;
+        padding: 0 0 0 2em;
+        text-align: left;
+    }
+
+    .submenu hr {
+        display: none;
+    }
+
+    header > a, header #hamburger {
+        width: auto;
+        height: 30px;
+        position: relative;
+    }
+    header #hamburger {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 30px;
+        cursor: pointer;
+    }
+    
+    header #hamburger .bar {
+        height: 1px;
+        width: 20px;
+        background: #5d636a;
+    }
+
+    header #hamburger #first {
+        margin-top: 3px;
+    }
+
+    header #hamburger #second, header #hamburger #third {
+        margin-top: 10px;
+    }
+
+    header #signup, header #signin {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        color: #e71f5e;
+        font-size: .9em;
+    }
+
+    header #nav > #signup:hover, header #nav > #signin:hover {
+        color: #e71f5e;
+    }
 }

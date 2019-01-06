@@ -29,3 +29,35 @@
 #footer #links a:hover {
     color: #878787;
 }
+
+@media screen and (max-width: 1024px) {
+    #footer {
+        height: auto;
+        padding: 20px 40px;
+        position: relative;
+    }
+
+    #footer #links {
+        float: initial;
+    }
+
+    #footer #links a, #footer #copyright {
+        margin: 0;
+        display: block;
+    }
+
+    #footer #copyright {
+        margin-top: 10px;
+    }
+
+    #footer #social {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px 40px;
+    }
+
+    #footer span.taille {
+        display: none;
+    }
+}

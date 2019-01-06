@@ -10,19 +10,11 @@ let activeTransparentNav = () => {
     }
 }
 
-let setDropDownPosition = () => {
-    let ressourcesBtnPos = document.getElementById("ressources").getBoundingClientRect().left
-    document.querySelector('.dropDown').style.left = `${ressourcesBtnPos - 17}px`
-    document.querySelector('.dropDown-mouseover').style.left = `${ressourcesBtnPos - 17}px`
-}
-
-let toggleDropDown = (show) => {
-    setDropDownPosition()
-    if (show === true) {
-        document.querySelector('.dropDown').style.display = "block"
+let toggleDropDown = () => {
+    const dropdown = document.getElementById('mainnav')
+    if(dropdown.classList.contains('active')) {
+        dropdown.classList.remove('active')
     } else {
-        document.querySelector('.dropDown').style.display = "none"
+        dropdown.classList.add('active')
     }
 }
-
-setDropDownPosition()

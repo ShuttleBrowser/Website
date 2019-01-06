@@ -141,3 +141,12 @@
     font-size: 11px;
     color: #c8c9c9;
 }
+
+@media screen and (max-width: 1024px) {
+    body {
+        height: 100%;
+    }
+    #content {
+        height: 100%;
+    }
+}

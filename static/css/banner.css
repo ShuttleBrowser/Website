@@ -31,3 +31,12 @@
     background: white;
     color: #e71f5e;
 }
+
+@media screen and (max-width: 1024px) {
+    #banner {
+        height: 20px;
+    }
+    #banner > * {
+        display: none !important;
+    }
+}
