@@ -1,14 +1,23 @@
-const load = () => {
-  const squares = document.querySelector('.squares');
-  squares.innerHTML = ''
-  for (var i = 1; i < 197; i++) {
-    const level = Math.floor(Math.random() * 5);
-    squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
-  }
+const rows = 7;
+const columns = 28;
+
+let s = '';
+
+for(let i = 0; i < rows; i++) {
+	s += '<tr>'
+	for(let a = 0; a < columns; a++) {
+		s += '<td><img src="https://via.placeholder.com/320" alt=" " /></td>'
+	}
+	s += '</tr>'
 }
+squares.innerHTML += s;
 
-setInterval(() => {
-    load()
-}, 5000)
+const update = () => {
+	let squares = document.querySelectorAll('#squares td')
+	for(let i = 0; i < squares.length; i++) {
+		squares[i].setAttribute('class', 'level-' + Math.round(Math.random()*5))
+	}
+}
+update()
 
-load()
+setInterval(update, 5000)

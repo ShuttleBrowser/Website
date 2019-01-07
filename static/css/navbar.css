@@ -247,6 +247,7 @@ header #hamburger {
         text-align: center;
         color: #e71f5e;
         font-size: .9em;
+        border: 0px none;
     }
 
     header #nav > #signup:hover, header #nav > #signin:hover {
