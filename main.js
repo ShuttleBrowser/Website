@@ -31,6 +31,18 @@ app.get('/developers', (req, res) => {
     res.render('index', {page: "developers", title : "Developers"})
 })
 
+app.get('/terms', (req, res) => {
+    res.render('index', {page: "terms", title : "Terms of Service"})
+})
+
+app.get('/addons', (req, res) => {
+    res.render('index', {page: "building", title : "Addons page"})
+})
+
+app.get('/legalandprivacy', (req, res) => {
+    res.render('index', {page: "building", title : "Legal and Privacy"})
+})
+
 app.get('*', (req, res) => {
     res.render('index', {page: 'error', title : 'Error'})
 })

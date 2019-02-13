@@ -10,10 +10,10 @@
 }
 
 #footer #social a {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    border: 1px solid #c4c5c4;
+    background: #e71f5f;
     margin-left: 20px;
 }
 

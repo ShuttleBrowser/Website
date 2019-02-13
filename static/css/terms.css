@@ -1,0 +1,18 @@
+#terms {
+    height: 100%;
+    width: 1020px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+}
+#terms > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+span.taille {
+    height: 100%;
+}
+
+#terms p {
+    margin: 20px 0;
+}
